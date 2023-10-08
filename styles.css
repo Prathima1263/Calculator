@@ -1,0 +1,82 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family:'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.calculator{
+    background: rgba(0, 0, 0, 0.886);
+    padding: 20px;
+    border-radius: 20px;
+    max-width: 400px; 
+    width: 100%;
+    z-index: 1;
+    text-align: center;
+}
+.calculator form input{
+    border:0;
+    outline: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.255),5px 5px 15px rgba(0,0,0,0.2);
+    background: rgb(245, 222, 179);
+    font-size: 30px;
+    color: #050101;
+    cursor: pointer;
+    margin: 10px;
+
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    .calculator form input {
+        width: 45px;
+        height: 45px;
+        font-size: 16px;
+    }
+}
+
+form .display{
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+}
+form .display input{
+    text-align: right;
+    flex:1;
+    font-size: 45px;
+    box-shadow: none;
+}
+form input.equal{
+    width: 145px;
+}
+form input.operator{
+    font-size: 35px;
+    color: #cb1902;
+}
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: videoAnimation 20s linear infinite; /* Add a CSS animation to the video */
+}
+
+@keyframes videoAnimation {
+    0% { transform: scale(1.1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1.1); }
+}
